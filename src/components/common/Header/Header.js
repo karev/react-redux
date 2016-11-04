@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { Link, IndexLink } from 'react-router';
 
 const Header = (props) => {
     return (
-        <h3>Header ...</h3>
+        <nav>
+            <IndexLink to="/" activeClassName="active">Accueil</IndexLink>
+            {" | "}
+            <Link to="about" activeClassName="active">About</Link>
+        </nav>
     );
 };
 
