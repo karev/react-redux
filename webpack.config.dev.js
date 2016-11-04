@@ -16,6 +16,11 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  resolve: {
+    alias: {},
+    extensions: ['', '.js', '.jsx'],
+    root: [path.resolve(__dirname, 'src/components/common')]
+  },
   devServer: {
     contentBase: path.resolve(__dirname, 'src')
   },
