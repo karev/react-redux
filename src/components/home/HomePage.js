@@ -6,7 +6,7 @@ class HomePage extends Component {
     return (
       <div className="jumbotron">
         <h1>Home</h1>
-        <p>Home page description</p>
+        <p className="hello">Home page description</p>
         <Link to="about" className="btn btn-primary btn-lg">About</Link>
       </div>
     );

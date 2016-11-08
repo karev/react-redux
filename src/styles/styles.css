@@ -1,0 +1,15 @@
+<<<<<<< Updated upstream
+=======
+:root {
+  --fontSize: 2em;
+}
+
+.active {
+    color: #7b4ddd;
+    font-weight: bold;
+}
+
+.hello {
+  font-size: calc(var(--fontSize) * 2) !important;
+}
+>>>>>>> Stashed changes
