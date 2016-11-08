@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
 import open from 'open';
+import colors from 'colors';
 
 /* eslint-disable no-console */
 
@@ -23,8 +24,9 @@ app.get('*', function(req, res) {
 
 app.listen(port, function(err) {
   if (err) {
-    console.log(err);
+    console.log(err.red);
   } else {
+    console.log('visit localhost:3000'.red);
     open(`http://localhost:${port}`);
   }
 });
