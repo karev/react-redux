@@ -1,9 +1,10 @@
-:root{
+:root {
   --fontSize: 2rem;
 }
+
 .active {
-    color: #7b4ddd;
-    font-weight: bold;
+  color: #7b4ddd;
+  font-weight: bold;
 }
 
 .hello {

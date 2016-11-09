@@ -17,10 +17,13 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));
+app.use('/public', express.static('public'));
 
 app.get('*', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
 });
+
+
 
 app.listen(port, function(err) {
   if (err) {
