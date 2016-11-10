@@ -1,0 +1,11 @@
+.loader::before {
+  background-color: none;
+  background-image: url('../img/loader.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100px;
+}
+
+.loader::after {
+  content: none;
+}

@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
+import postCssImport from 'postcss-import';
 
 export default {
   debug: true,
@@ -40,9 +41,17 @@ export default {
       {test: /\.(png|jpg)$/, loader: 'url?limit=10000&name=img/[name].[ext]'}
     ]
   },
-  postcss: function () {
+  postcss: function (bundler) {
     return [
-      require("postcss-cssnext")()
+      postCssImport({
+        addDependencyTo: bundler
+      }),
+      require("postcss-cssnext")({
+        browsers: ['last 2 versions', 'IE > 10'],
+        features: {
+          customProperties: true
+        }
+      })
     ];
   }
 };

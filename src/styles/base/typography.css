@@ -1,0 +1,558 @@
+@import '../utils/variables.css';
+
+/* -----------------------------------------------------------------------------
+ * Fonts
+ * -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: custom;
+  font-style: normal;
+  font-weight: 400;
+  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.woff') format('woff');
+
+  /* src:
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.woff2') format('woff2'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.woff') format('woff'),
+    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.ttf') format('truetype'); */
+}
+
+.icon[class^='icon-'],
+.icon[class*=' icon-'] {
+  display: inline-block;
+  font-family: custom;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+}
+
+i.icon-close::before {
+  content: '\E001';
+}
+
+i.icon-antenna::before {
+  content: '\E002';
+}
+
+i.icon-arrow-circle-left::before {
+  content: '\E003';
+}
+
+i.icon-arrow-circle-right::before {
+  content: '\E004';
+}
+
+i.icon-articles-list::before {
+  content: '\E005';
+}
+
+i.icon-audio::before {
+  content: '\E006';
+}
+
+i.icon-calendar::before {
+  content: '\E007';
+}
+
+i.icon-clock::before {
+  content: '\E008';
+}
+
+i.icon-comment::before {
+  content: '\E009';
+}
+
+i.icon-dotgridchart::before {
+  content: '\E00A';
+}
+
+i.icon-down::before {
+  content: '\E00B';
+}
+
+i.icon-earth::before {
+  content: '\E00C';
+}
+
+i.icon-powerpoint::before {
+  content: '\E00D';
+}
+
+i.icon-excel::before {
+  content: '\E00E';
+}
+
+i.icon-exit-fullscreen::before {
+  content: '\E00F';
+}
+
+i.icon-eye::before {
+  content: '\E010';
+}
+
+i.icon-footer::before {
+  content: '\E011';
+}
+
+i.icon-fullscreen::before {
+  content: '\E012';
+}
+
+i.icon-gear::before {
+  content: '\E013';
+}
+
+i.icon-heart::before {
+  content: '\E014';
+}
+
+i.icon-highlight::before {
+  content: '\E015';
+}
+
+i.icon-horizontalbarchart::before {
+  content: '\E016';
+}
+
+i.icon-horizontalstackedbarwithsentimentchart::before {
+  content: '\E017';
+}
+
+i.icon-image::before {
+  content: '\E018';
+}
+
+i.icon-infography::before {
+  content: '\E019';
+}
+
+i.icon-keyfigure::before {
+  content: '\E01A';
+}
+
+i.icon-keywords::before {
+  content: '\E01B';
+}
+
+i.icon-label::before {
+  content: '\E01C';
+}
+
+i.icon-langage::before {
+  content: '\E01D';
+}
+
+i.icon-language::before {
+  content: '\E01E';
+}
+
+i.icon-linearchart::before {
+  content: '\E01F';
+}
+
+i.icon-link::before {
+  content: '\E020';
+}
+
+i.icon-lock::before {
+  content: '\E021';
+}
+
+i.icon-map::before {
+  content: '\E022';
+}
+
+i.icon-media::before {
+  content: '\E023';
+}
+
+i.icon-menu::before {
+  content: '\E024';
+}
+
+i.icon-money::before {
+  content: '\E025';
+}
+
+i.icon-monohorizontalbarchart::before {
+  content: '\E026';
+}
+
+i.icon-next::before {
+  content: '\E027';
+}
+
+i.icon-pdf::before {
+  content: '\E028';
+}
+
+i.icon-pen::before {
+  content: '\E029';
+}
+
+i.icon-pencil::before {
+  content: '\E02A';
+}
+
+i.icon-piechart::before {
+  content: '\E02B';
+}
+
+i.icon-pin::before {
+  content: '\E02C';
+}
+
+i.icon-plus-circle::before {
+  content: '\E02D';
+}
+
+i.icon-press-review-2::before {
+  content: '\E02E';
+}
+
+i.icon-press-review::before {
+  content: '\E02F';
+}
+
+i.icon-press::before {
+  content: '\E030';
+}
+
+i.icon-presse::before {
+  content: '\E031';
+}
+
+i.icon-prev::before {
+  content: '\E032';
+}
+
+i.icon-public::before {
+  content: '\E033';
+}
+
+i.icon-question::before {
+  content: '\E034';
+}
+
+i.icon-quote-left::before {
+  content: '\E035';
+}
+
+i.icon-radio::before {
+  content: '\E036';
+}
+
+i.icon-reply::before {
+  content: '\E037';
+}
+
+i.icon-search::before {
+  content: '\E038';
+}
+
+i.icon-sentiment::before {
+  content: '\E039';
+}
+
+i.icon-share::before {
+  content: '\E03A';
+}
+
+i.icon-shopping-cart::before {
+  content: '\E03B';
+}
+
+i.icon-social-media::before {
+  content: '\E03C';
+}
+
+i.icon-social::before {
+  content: '\E03D';
+}
+
+i.icon-source-type::before {
+  content: '\E03E';
+}
+
+i.icon-source::before {
+  content: '\E03F';
+}
+
+i.icon-tick::before {
+  content: '\E040';
+}
+
+i.icon-top-support::before {
+  content: '\E041';
+}
+
+i.icon-top::before {
+  content: '\E042';
+}
+
+i.icon-trash::before {
+  content: '\E043';
+}
+
+i.icon-tv::before {
+  content: '\E044';
+}
+
+i.icon-twitter-o::before {
+  content: '\E045';
+}
+
+i.icon-twitter::before {
+  content: '\E046';
+}
+
+i.icon-up::before {
+  content: '\E047';
+}
+
+i.icon-user::before {
+  content: '\E048';
+}
+
+i.icon-users::before {
+  content: '\E049';
+}
+
+i.icon-verticalstackedbarchart::before {
+  content: '\E04A';
+}
+
+i.icon-video::before {
+  content: '\E04B';
+}
+
+i.icon-view-detail::before {
+  content: '\E04C';
+}
+
+i.icon-view-list::before {
+  content: '\E04D';
+}
+
+i.icon-warning::before {
+  content: '\E04E';
+}
+
+i.icon-web::before {
+  content: '\E04F';
+}
+
+i.icon-wordscloud::before {
+  content: '\E050';
+}
+
+i.icon-download::before {
+  content: '\E051';
+}
+
+i.icon-sex::before {
+  content: '\E052';
+}
+
+i.icon-backward::before {
+  content: '\E053';
+}
+
+i.icon-forward::before {
+  content: '\E054';
+}
+
+i.icon-envelope::before {
+  content: '\E055';
+}
+
+i.icon-refresh::before {
+  content: '\E056';
+}
+
+i.icon-list::before {
+  content: '\E057';
+}
+
+i.icon-save::before {
+  content: '\E058';
+}
+
+i.icon-age::before {
+  content: '\E059';
+}
+
+i.icon-plus::before {
+  content: '\EA01';
+}
+
+i.icon-return::before {
+  content: '\EA02';
+}
+
+i.icon-clipboard::before {
+  content: '\EA03';
+}
+
+i.icon-html::before {
+  content: '\EA04';
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Headings
+ * -------------------------------------------------------------------------- */
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.h1 {
+  font-size: 2rem;
+}
+
+.h2 {
+  font-size: 1.75rem;
+}
+
+.h3 {
+  font-size: 1.5rem;
+}
+
+.h4 {
+  font-size: 1.25rem;
+}
+
+.h5 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.column-title {
+  margin-bottom: .75rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Links
+ * -------------------------------------------------------------------------- */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  @nest
+    &:hover,
+    &:focus {
+    color: var(--link-hover-color);
+  }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Lists
+ * -------------------------------------------------------------------------- */
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}

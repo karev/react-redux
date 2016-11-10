@@ -1,0 +1,68 @@
+@import '../utils/variables.css';
+
+/* stylelint-disable selector-no-universal */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* stylelint-enable */
+
+/* stylelint-disable at-rule-no-vendor-prefix */
+@at-root {
+
+  @-webkit-viewport {
+    width: device-width;
+  }
+
+  @-moz-viewport {
+    width: device-width;
+  }
+
+  @-ms-viewport {
+    width: device-width;
+  }
+
+  @-o-viewport {
+    width: device-width;
+  }
+
+  @viewport {
+    width: device-width;
+  }
+}
+/* stylelint-enable */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: var(--font-size-root);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  height: 100%;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-text);
+
+  @media (--min-md) {
+    overflow: hidden;
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

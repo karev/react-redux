@@ -1,0 +1,235 @@
+:root {
+  /* ---------------------------------------------------------------------------
+   * Font
+   * ------------------------------------------------------------------------ */
+
+  --font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-base: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-root: 16px;
+  --font-size-base: .875rem;
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+
+  /* ---------------------------------------------------------------------------
+   * Font size
+   * ------------------------------------------------------------------------ */
+
+  --font-size-xx-small: .625rem;
+  --font-size-x-small: .75rem;
+  --font-size-small: .875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-xx-large: 2rem;
+
+
+  /* ---------------------------------------------------------------------------
+   * Line height
+   * ------------------------------------------------------------------------ */
+
+  --line-height-text: 1.428571429;
+  --line-height-fulltext: 1.8;
+  --line-height-reset: 1;
+  --line-height-tab: 3rem;
+
+
+  /* ---------------------------------------------------------------------------
+   * Spacing
+   * ------------------------------------------------------------------------ */
+
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --spacing-none: 0;
+  --spacing-xxx-small: .125rem;
+  --spacing-xx-small: .25rem;
+  --spacing-x-small: .5rem;
+  --spacing-small: .75rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+  --spacing-x-large: 2rem;
+
+
+  /* ---------------------------------------------------------------------------
+   * Radius
+   * ------------------------------------------------------------------------ */
+
+  --border-radius-small: .125rem;
+  --border-radius-medium: .25rem;
+  --border-radius-large: .5rem;
+  --border-radius-pill: 15rem;
+  --border-radius-circle: 50%;
+
+
+  /* ---------------------------------------------------------------------------
+   * Colors
+   * ------------------------------------------------------------------------ */
+
+  /* http://clrs.cc */
+
+  --white: #fff;
+  --black: #000;
+  --gray-lighter: #f8f8f8;
+  --gray-light: #eee;
+  --light-gray: #d3d3d3;
+  --silver: #c0c0c0;
+  --medium-gray: #bebebe;
+  --dark-medium-gray: #a9a9a9;
+  --spanish-gray: #989898;
+  --gray: #808080;
+  --dim-gray: #696969;
+  --davy-gray: #555;
+  --jet: #343434;
+  --gray-dark: #424242;
+  --gray-darker: #202325;
+
+  --green: #61bd6d;
+  --crimson: #b8312f;
+  --blue: #2c82c9;
+  --dark-purple: #553982;
+  --orange: #f37934;
+  --yellow: #eee03f;
+  --grey-orange: #75706b;
+  --dark-blue: #28324e;
+  --teal: #1abc9c;
+  --pink: #e53293;
+  --cyan: #54acd2;
+  --red-orange: #d14841;
+  --purple: #781e9e;
+  --amber: #fba026;
+  --brown: #807715;
+
+  --brand-success: #06be47;
+  --brand-info: #5bc0de;
+  --brand-warning: #f0ad4e;
+  --brand-danger: #e43411;
+
+  --color-positive: var(--brand-success);
+  --color-neutral: var(--gray);
+  --color-negative: var(--brand-danger);
+
+  --selection-color: #f6e4c0;
+  --kantar-color: #ff5800;
+  --twitter-color: #55acee;
+  --highlight-color: #fefe69;
+
+
+  --color-border-destructive: #c23934;
+  --color-border-destructive-hover: #a61a14;
+  --color-border-destructive-active: #870500;
+
+
+  --color-background-destructive: #c23934;
+  --color-background-destructive-hover: #a61a14;
+  --color-background-destructive-active: #870500;
+
+
+  /* ---------------------------------------------------------------------------
+   * Scaffolding
+   * ------------------------------------------------------------------------ */
+
+  --body-bg: #e8e7e7;
+  --text-color: var(--jet);
+
+  --link-color: #428bca;
+  --link-hover-color: color(var(--link-color) blackness(15%));
+
+
+  /* ---------------------------------------------------------------------------
+   * Buttons
+   * ------------------------------------------------------------------------ */
+
+  --btn-default-border: var(--medium-gray);
+  --btn-default-border-hover: var(--gray-dark);
+  --btn-default-bg: var(--gray-lighter);
+  --btn-default-bg-hover: var(--gray-dark);
+  --btn-default-color: var(--text-color);
+  --btn-default-color-hover: var(--white);
+
+  --btn-success-bg: var(--brand-success);
+  --btn-success-bg-hover: color(var(--btn-success-bg) blackness(30%));
+  --btn-success-color: var(--white);
+
+  --btn-warning-bg: var(--brand-warning);
+  --btn-warning-bg-hover: color(var(--btn-warning-bg) lightness(- 10%));
+  --btn-warning-color: var(--white);
+
+  --btn-danger-bg: var(--brand-danger);
+  --btn-danger-bg-hover: color(var(--btn-danger-bg) lightness(55%));
+  --btn-danger-color: var(--white);
+
+  --btn-link-color: #0275d8;
+
+
+  /* ---------------------------------------------------------------------------
+   * Time
+   * ------------------------------------------------------------------------ */
+
+  --duration-instantly: 0s;
+  --duration-immediately: .05s;
+  --duration-quickly: .1s;
+  --duration-promptly: .2s;
+  --duration-slowly: .4s;
+  --duration-paused: 3.2s;
+
+
+  /* ---------------------------------------------------------------------------
+   * Media Query
+   * ------------------------------------------------------------------------ */
+
+  @custom-media --min-sm (width >= 34em);
+  @custom-media --min-md (width >= 48em);
+  @custom-media --min-lg (width >= 62em);
+  @custom-media --min-xl (width >= 75em);
+  @custom-media --max-xs (width <= 33.9375em);
+  @custom-media --max-sm (width <= 47.9375em);
+  @custom-media --max-md (width <= 61.9375em);
+  @custom-media --max-lg (width <= 74.9375em);
+  @custom-media --only-sm (width >= 34em) and (width <= 47.9375em);
+  @custom-media --only-md (width >= 48em) and (width <= 61.9375em);
+  @custom-media --only-lg (width >= 62em) and (width <= 74.9375em);
+
+
+  /* ---------------------------------------------------------------------------
+   * Z-index
+   * ------------------------------------------------------------------------ */
+
+  --z-index-toast: 10000;
+  --z-index-modal: 9000;
+  --z-index-overlay: 8000;
+  --z-index-dropdown: 7000;
+  --z-index-dialog: 6000;
+  --z-index-popup: 5000;
+  --z-index-default: 1;
+  --z-index-deepdive: -99999;
+
+
+  /* ---------------------------------------------------------------------------
+   * Misc
+   * ------------------------------------------------------------------------ */
+
+  --height-header: 3.125rem;
+
+  --header-height: 3.125rem;
+  --sidebar-width: 16.25rem;
+  --top-bar-height: 3.125rem;
+
+
+  /* ---------------------------------------------------------------------------
+   * Widgets
+   * ------------------------------------------------------------------------ */
+
+  --widget-width: 275px;
+  --widget-height: 275px;
+  --widget-gutter: 15px;
+
+  --expanded-widget-height: 500px;
+
+  /* Europe map */
+
+  --europe-map-selected-color: #1e2868;
+}
