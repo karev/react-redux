@@ -1,13 +1,12 @@
 import './Svg.css';
 import React, { PropTypes } from 'react';
-import path from 'path';
 
 const Svg = (props) => {
   const {className, icon, size } = props;
 
   return (
     <svg className={`icon icon-${icon} icon--${size} ${className}`}>
-  <use xlinkHref={`/public/sprite.svg#${icon}`} />
+      <use xlinkHref={`/public/sprite.svg#${icon}`} />
     </svg>
   );
 };

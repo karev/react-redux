@@ -21,6 +21,6 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
     if (err) {
       return console.log(err);
     }
-    console.log('index.html written to /build'.green);
+    console.log('index.html réecrit dans /build'.green);
   });
 });

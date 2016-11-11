@@ -1,21 +1,22 @@
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import CompressionPlugin from 'compression-webpack-plugin';
+import postCssImport from 'postcss-import';
+import postCssUrl from 'postcss-url';
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production')
 };
 
 export default {
-  debug: true,
+  debug: false,
   devtool: 'source-map',
   noInfo: false,
   entry: './src/index',
   target: 'web',
   output: {
     path: __dirname + '/build',
-    publicPath: '/',
+    publicPath: './',
     filename: 'bundle.js'
   },
   resolve: {
@@ -39,30 +40,41 @@ export default {
         comments: false
       },
       sourceMap: false
-    }),
-    new CompressionPlugin({
-      asset: "[path].gz[query]",
-      algorithm: "gzip",
-      test: /\.js$|\.css$|\.html$/,
-      threshold: 10240,
-      minRatio: 0.8
     })
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
-      {test: /(\.css)$/, loader: ExtractTextPlugin.extract('css-loader!postcss-loader')},
+      {test: /\.(js|jsx)$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
+      {
+        test: /(\.css)$/,
+        loader: ExtractTextPlugin.extract('css-loader!postcss-loader')
+      },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file?name=fonts/[name].[ext]'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000&name=fonts/[name].[ext]'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream&name=fonts/[name].[ext]'},
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml&name=svg/[name].[ext]'
+      },
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.(png|jpg)$/, loader: 'url?limit=10000&name=img/[name].[ext]'}
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file?limit=10000&name=img/[name].[ext]'
+      }
     ]
   },
-  postcss: function () {
+  postcss: function (bundler) {
     return [
-      require("postcss-cssnext")()
+      postCssImport({
+        addDependencyTo: bundler
+      }),
+      require("postcss-cssnext")({
+        browsers: ['last 2 versions', 'IE > 10'],
+        features: {
+          customProperties: true
+        }
+      }),
+      postCssUrl()
     ];
   }
 };

@@ -8,84 +8,49 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 100;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/thin/roboto_thin.ttf') format('truetype'); */
+  src: url('../../fonts/roboto/thin/roboto_thin.woff') format('woff');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/light/roboto_light.ttf') format('truetype'); */
+  src: url('../../fonts/roboto/light/roboto_light.woff') format('woff');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/regular/roboto_regular.ttf') format('truetype'); */
+  src: url('../../fonts/roboto/regular/roboto_regular.woff') format('woff');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/medium/roboto_medium.ttf') format('truetype'); */
+  src: url('../../fonts/roboto/medium/roboto_medium.woff') format('woff');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/bold/roboto_bold.ttf') format('truetype'); */
+  src: url('../../fonts/roboto/bold/roboto_bold.woff') format('woff');
 }
 
 @font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/roboto/black/roboto_black.ttf') format('truetype'); */
+  src: url('../../fonts/roboto/black/roboto_black.woff') format('woff');
 }
 
 @font-face {
   font-family: custom;
   font-style: normal;
   font-weight: 400;
-  src: url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.woff') format('woff');
-
-  /* src:
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.woff2') format('woff2'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.woff') format('woff'),
-    url('//fonts-kmplus.kantarmedia.com/Areas/Delivery/Content/fonts/custom/custom.ttf') format('truetype'); */
+  src: url('../../fonts/custom/custom.woff') format('woff');
 }
 
 .icon[class^='icon-'],

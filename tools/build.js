@@ -7,7 +7,7 @@ import colors from 'colors';
 
 process.env.NODE_ENV = 'production'; // this assures the Babel dev config (for hot reloading) doesn't apply.
 
-console.log('Generating minified bundle for production via Webpack. This will take a moment...'.blue);
+console.log('Génération du bundle minifié en cours ...'.blue);
 
 webpack(webpackConfig).run((err, stats) => {
   if (err) { // so a fatal error occurred. Stop here.
@@ -22,7 +22,7 @@ webpack(webpackConfig).run((err, stats) => {
   }
 
   if (jsonStats.hasWarnings) {
-    console.log('Webpack generated the following warnings: '.bold.yellow);
+    console.log('Webpack à générer ces warnings: '.bold.yellow);
     jsonStats.warnings.map(warning => console.log(warning.yellow));
   }
 

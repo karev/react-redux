@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Header from 'Header/Header';
+import Header from './common/Header/Header';
 import SideBar from './sidebar/SideBar';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
         <Header />
         <SideBar />
         {this.props.children}
+        <img src={"/assets/img/byron.png"} />
       </div>
     );
   }

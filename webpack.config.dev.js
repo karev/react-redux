@@ -1,6 +1,8 @@
 import webpack from 'webpack';
 import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import postCssImport from 'postcss-import';
+import postCssUrl from 'postcss-url';
 
 export default {
   debug: true,
@@ -20,7 +22,9 @@ export default {
   resolve: {
     alias: {},
     extensions: ['', '.js', '.jsx'],
-    root: [path.resolve(__dirname, 'src/components/common')]
+    root: [
+      path.resolve(__dirname, 'src/components/common')
+    ]
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'src')
@@ -32,13 +36,24 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
-      {test: /(\.css)$/, loaders: ['style-loader','css-loader?importLoaders=1','postcss-loader?sourceMap=inline']},
+      {
+        test: /(\.css)$/,
+        include: [
+          path.join(__dirname, 'src'),
+          path.join(__dirname, 'assets')
+        ],
+        loaders: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+        ]
+      },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.(png|jpg)$/, loader: 'url?limit=10000&name=img/[name].[ext]'}
+      {test: /\.(png|jpg)$/, loader: 'file?limit=10000&name=img/[name].[ext]'}
     ]
   },
   postcss: function (bundler) {
@@ -51,7 +66,8 @@ export default {
         features: {
           customProperties: true
         }
-      })
+      }),
+      postCssUrl()
     ];
   }
 };

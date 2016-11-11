@@ -11,6 +11,7 @@ const app = express();
 app.use(compression());
 app.use(express.static('build'));
 app.use('/public', express.static('public'));
+app.use('/assets', express.static('assets'));
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../build/index.html'));
