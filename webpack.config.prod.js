@@ -3,6 +3,7 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import postCssImport from 'postcss-import';
 import postCssUrl from 'postcss-url';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production')
@@ -22,12 +23,17 @@ export default {
   resolve: {
     alias: {},
     extensions: ['', '.js', '.jsx'],
-    root: [path.resolve(__dirname, 'src/components/common')]
+    root: [
+      path.resolve(__dirname, 'src/components/common')
+    ]
   },
   devServer: {
     contentBase: './build'
   },
   plugins: [
+    new CopyWebpackPlugin([
+      { from: 'public', to: 'public' }
+    ]),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin(GLOBALS),
     new ExtractTextPlugin('style.css'),

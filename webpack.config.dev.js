@@ -15,7 +15,7 @@ export default {
   ],
   target: 'web',
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/build',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -53,7 +53,7 @@ export default {
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
       {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.(png|jpg)$/, loader: 'file?limit=10000&name=img/[name].[ext]'}
+      {test: /\.(png|jpg)$/, loader: 'url?limit=10000&name=img/[name].[ext]'}
     ]
   },
   postcss: function (bundler) {
