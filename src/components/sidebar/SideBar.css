@@ -1,0 +1,13 @@
+@import '../../../assets/styles/utils/variables.css';
+
+.SideBar {
+    width: var(--sidebar-width);
+    background: var(--gray-darker);
+    color: var(--white);
+    padding: 10px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    overflow-y: auto;
+    z-index: var(--z-index-default);
+}

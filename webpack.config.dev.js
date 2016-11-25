@@ -23,7 +23,7 @@ export default {
     alias: {},
     extensions: ['', '.js', '.jsx'],
     root: [
-      path.resolve(__dirname, 'src/components/common')
+      path.resolve(__dirname, 'src/components/common/')
     ]
   },
   devServer: {

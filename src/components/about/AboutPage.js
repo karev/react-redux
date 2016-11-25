@@ -8,7 +8,7 @@ class AboutPage extends Component {
 
   render() {
     return (
-      <div className="jumbotron">
+      <div className="main-content">
         <h1>About</h1>
         <p>About page description</p>
       </div>

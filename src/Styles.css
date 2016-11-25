@@ -1,0 +1,11 @@
+@import '../assets/styles/utils/variables.css';
+
+.main-content {
+  display: block;
+  background: #eee;
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+  position: relative;
+  left: var(--sidebar-width);
+  padding: 15px;
+}
