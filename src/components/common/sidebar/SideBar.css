@@ -1,4 +1,4 @@
-@import '../../../assets/styles/utils/variables.css';
+@import '../../../../assets/styles/utils/variables.css';
 
 .SideBar {
     width: var(--sidebar-width);
