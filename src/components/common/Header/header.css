@@ -1,3 +1,4 @@
+@import '../../../../assets/styles/utils/variables.css';
 .header {
   display: flex;
   width: 100%;

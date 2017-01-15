@@ -7,6 +7,7 @@ const Header = (props) => {
     <nav className="header">
       <IndexLink to="/" activeClassName="active">Accueil</IndexLink>
       <Link to="about" activeClassName="active">About</Link>
+      <Link to="recipes" activeClassName="active">Recipes</Link>
     </nav>
   );
 };

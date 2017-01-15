@@ -20,8 +20,9 @@ export default {
     filename: 'bundle.js'
   },
   resolve: {
+    modules: ['node_modules', 'src'],
     alias: {},
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', '.css'],
     root: [
       path.resolve(__dirname, 'src/components/common/')
     ]
@@ -39,6 +40,7 @@ export default {
       {
         test: /(\.css)$/,
         include: [
+          path.join(__dirname),
           path.join(__dirname, 'src'),
           path.join(__dirname, 'assets')
         ],

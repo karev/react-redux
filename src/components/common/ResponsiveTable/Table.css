@@ -1,0 +1,67 @@
+@import '../../../../assets/styles/utils/variables.css';
+
+.table-fixed_column {
+  float: left;
+  width: 20%;
+  border-right: 1px solid #ccc;
+  border-collapse: collapse;
+  display: table;
+}
+
+.table-scroll {
+  float: left;
+  width: calc(100% - 41%);
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #AAA;
+}
+
+.table-scroll table {
+  margin-top: -1px;
+  width: 30%;
+  min-width: 300px;
+  max-width: 40%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  background-color: #f2f2f2;
+  color: #0076BF;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-clip: padding-box;
+  border-collapse: collapse;
+}
+
+td {
+  background-color: #fff;
+}
+
+@media(max-width: 800px) {
+  .table-scroll table {
+    margin-top: -1px;
+    border-collapse: collapse;
+  }
+  .table-scroll {
+    width: 100%;
+  }
+}
+
+@media(max-width: 500px) {
+  .table-scroll table {
+    margin-top: -1px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+  .table-scroll {
+    width: 100%;
+  }
+}
